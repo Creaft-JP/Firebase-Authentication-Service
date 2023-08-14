@@ -7,7 +7,9 @@ WORKDIR /build
 
 COPY . .
 
-RUN go build
+RUN go get
+
+RUN go build -x
 
 WORKDIR /staging
 
