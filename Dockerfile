@@ -9,7 +9,7 @@ COPY . .
 
 RUN go get
 
-RUN go build -x
+RUN go build -ldflags="-s -w" -trimpath
 
 WORKDIR /staging
 
