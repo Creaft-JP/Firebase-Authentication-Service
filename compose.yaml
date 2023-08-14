@@ -1,0 +1,18 @@
+version: '3.8'
+
+x-shared_environment: &shared_environment
+  GIN_MODE: release
+  PORT: 5000
+
+services:
+  app:
+    image: auth:latest
+    build:
+      context: .
+    volumes:
+      - ./resources:/app/resources
+    environment:
+      <<: *shared_environment
+    ports:
+      - '5555:5000'
+    command: []
