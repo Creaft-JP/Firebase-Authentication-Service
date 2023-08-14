@@ -1,12 +1,14 @@
 package env
 
 import (
+	"github.com/joho/godotenv"
 	"os"
 )
 
 var ProjectId string
 
 func init() {
+	_ = godotenv.Load()
 	ProjectId = getOrElse("PROJECT_ID", "")
 }
 
