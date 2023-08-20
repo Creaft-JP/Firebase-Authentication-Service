@@ -26,6 +26,7 @@ RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /app
 WORKDIR /app
 
 COPY --from=build --chown=authenticator:authenticator /staging /app
+COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 USER authenticator:authenticator
 
