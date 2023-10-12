@@ -1,7 +1,7 @@
 # ================================
 # Build
 # ================================
-FROM golang:1.21.0 as build
+FROM golang:1.21.3 as build
 
 WORKDIR /build
 
