@@ -28,5 +28,5 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          platforms: linux/amd64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           tags: creaftjp/firebase-authentication-service:latest,creaftjp/firebase-authentication-service:${{ env.version }}
